@@ -127,7 +127,10 @@ h1 {
 .lede,
 .intro p,
 .card p,
-.contact-copy {
+.contact-copy,
+.section-intro,
+.book-card p,
+.series-check p {
   font-size: 1.05rem;
   line-height: 1.75;
   color: var(--muted);
@@ -193,6 +196,18 @@ h2 {
   gap: 1rem;
 }
 
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.observer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
 .card {
   border-radius: 22px;
   padding: 1.4rem;
@@ -204,6 +219,89 @@ h2 {
 .card h3 {
   margin: 0.45rem 0 0.8rem;
   font-size: 2rem;
+}
+
+.feature-book,
+.book-card {
+  border-radius: 22px;
+  border: 1px solid rgba(30, 29, 26, 0.08);
+}
+
+.feature-book {
+  display: grid;
+  grid-template-columns: minmax(180px, 280px) minmax(0, 1fr);
+  gap: 1.5rem;
+  padding: 1.4rem;
+  align-items: center;
+}
+
+.book-card {
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.64);
+  display: flex;
+  flex-direction: column;
+}
+
+.book-card-copy {
+  padding-top: 1rem;
+}
+
+.feature-copy h3,
+.book-card h3 {
+  margin: 0.35rem 0 0.65rem;
+}
+
+.feature-title {
+  margin-top: -0.15rem;
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.book-cover {
+  width: 100%;
+  display: block;
+  border-radius: 16px;
+  box-shadow: 0 16px 40px rgba(20, 20, 18, 0.16);
+}
+
+.feature-cover {
+  max-width: 280px;
+  justify-self: center;
+}
+
+.book-actions {
+  margin-top: 1rem;
+}
+
+.retailer-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.retailer-list li {
+  padding: 0.65rem 0.8rem;
+  border-radius: 14px;
+  border: 1px solid rgba(30, 29, 26, 0.08);
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.availability-note {
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.text-link {
+  color: var(--button);
+  font-weight: 800;
+}
+
+.text-link:hover,
+.text-link:focus-visible {
+  color: var(--button-hover);
 }
 
 .accent-observer {
@@ -234,6 +332,14 @@ h2 {
   text-align: left;
 }
 
+.series-check {
+  margin-top: 1rem;
+  padding: 1rem 1.1rem;
+  border-radius: 18px;
+  border: 1px solid rgba(30, 29, 26, 0.08);
+  background: rgba(255, 255, 255, 0.62);
+}
+
 @media (max-width: 780px) {
   .page-shell {
     width: min(100% - 1rem, 100%);
@@ -249,6 +355,12 @@ h2 {
   }
 
   .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .book-grid,
+  .observer-grid,
+  .feature-book {
     grid-template-columns: 1fr;
   }
 

@@ -6,6 +6,8 @@ Static one-page site prepared for GitHub Pages with a custom domain.
 
 - `index.html` for the full landing page
 - `styles.css` for all styling
+- `assets/covers/` with extracted book covers
+- `assets/books/` with downloadable EPUB files
 - `CNAME` set to `uphoffjeff.com`
 - `.nojekyll` so GitHub Pages serves the site as plain static files
 
@@ -31,5 +33,5 @@ Optional: add a `www` CNAME pointing to `<your-github-username>.github.io`.
 
 ## Notes
 
-- Replace the placeholder contact email in `index.html` with your preferred address.
-- Replace the placeholder copy in each section as project details are finalized.
+- Replace the contact email in `index.html` with your preferred address.
+- The book titles came from the EPUB metadata; if you want nicer display names for The Observer volumes, edit those headings directly in `index.html`.
